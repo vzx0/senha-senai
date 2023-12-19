@@ -1,0 +1,174 @@
+
+
+@import url('https://fonts.cdnfonts.com/css/poppins');
+             
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    max-width: 400px;
+    background: #008554;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.5vmin solid #05060f;
+    box-shadow: 0.4rem 0.4rem #05060f;
+    overflow: hidden;
+    color: black;
+    overflow: hidden; /* Adicionado para esconder o conteúdo que ultrapassa o card */
+}
+
+
+
+input {
+    width: calc(100% - 20px); /* Ajuste para lidar com o padding do input */
+    border-radius: 5px;
+    height: 30px;
+    border: 2px solid #323232;
+    background-color: v#fff;
+    box-shadow: 4px 4px #323232;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #323232;
+    padding: 5px 10px;
+    outline: none;
+}
+      
+input::placeholder {
+    color: #6b6b6b;
+    opacity: 0.8;
+}
+
+
+.medidor {
+    height: 40px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.medidorPoderFundo {
+    height: 100%;
+    background-color: #ccc; /* Cor fixa no fundo */
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; /* Definindo z-index para garantir que fique abaixo da barra de progresso real */
+}
+
+.medidorFundo {
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 1; /* Definindo z-index para garantir que fique sobre a barra de progresso fixa no fundo */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.medidorPoder {
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 2; /* Definindo z-index para garantir que fique sobre a barra de fundo e fixa no fundo */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#textoPoder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Definindo z-index para garantir que fique sobre a barra de progresso real e a de fundo */
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+}
+
+#textoPoder span {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+}
+
+#requisitos {
+    text-align: left;
+}
+
+.requisitos div {
+    margin: 5px 0;
+}
+
+.vermelho {
+    color: rgb(255, 255, 255);
+}
+
+.verde {
+    color: #000000;
+}
+
+#requisitos {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.requisitos div {
+    padding-top: 10px;
+    margin: 15px 0;
+}
+
+
+#requisitos {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+
+button {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: #000000;
+    transition: 0.2s;
+}
+  
+button:hover {
+    color: #000;
+    transform: translate(-0.25rem, -0.25rem);
+    background: #ff90e8;
+    box-shadow: 0.25rem 0.25rem #000;
+}
+  
+button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  
+
+#requisitos {
+    display: none;
+}

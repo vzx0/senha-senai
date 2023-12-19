@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha Segura - Xisto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <label for="entradaSenha">Senha:</label>
+            <input type="password" id="entradaSenha">
+            <div class="medidor">
+                <div class="medidorPoderFundo"></div> <!-- Nova barra de cor fixa no fundo -->
+                <div class="medidorFundo"></div> <!-- Barra de progresso fixa no fundo -->
+                <div class="medidorPoder"></div> <!-- Barra de progresso real -->
+                <div id="textoPoder">Força da Senha: 0%</div>
+            </div>
+
+            <!-- Div Requisitos -->
+
+            <div id="requisitos" class="requisitos">
+                <div id="requisitoComprimento" class="vermelho">Mínimo 8 caracteres</div>
+                <div id="requisitoMinusculo" class="vermelho">Pelo menos uma letra minúscula</div>
+                <div id="requisitoMaiusculo" class="vermelho">Pelo menos uma letra maiúscula</div>
+                <div id="requisitoNumero" class="vermelho">Pelo menos um número</div>
+                <div id="requisitoSimbolo" class="vermelho">Pelo menos um símbolo</div>
+            </div>
+
+            <!-- Fim Div Requisitos -->
+            <button id="verSenha">Ver Senha</button>
+            <button onclick="verRequisitos()">Ver Requisitos</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
